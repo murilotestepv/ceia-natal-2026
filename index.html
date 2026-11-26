@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ceia por Menos de R$ 100</title>
+<meta name="description" content="Cardápio completo de Natal para sua família, com lista de compras e cronograma, gastando menos de R$ 100.">
+
+<!-- ===================== PIXEL DO META =====================
+     Pixel 1457229006523041.
+     O PageView dispara assim que a página carrega. -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1457229006523041');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1457229006523041&ev=PageView&noscript=1"></noscript>
+
+<!-- ===================== SCRIPT DE UTM (Utmify) =====================
+     Confira no painel da Utmify se o script é este mesmo. -->
+<script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-subids async defer></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600;800&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: caloroso, direto, de mãe que resolve a ceia sem drama — resposta direta low ticket.
+   IDEA: a nota do supermercado — a página se comporta como o cupom que prova que a ceia coube no bolso.
+   PICTURE: um cupom fiscal grande com os itens da ceia e o total "abaixo de R$ 100".
+   COLOUR and TYPE: vermelho natalino dominante, branco, verde pinheiro de apoio, dourado só no botão; DM Serif Display + Inter, Courier Prime no cupom.
+   LAYOUT: coluna única mobile-first, faixas vermelhas de ponta a ponta, CTA repetido a cada bloco. */
+:root{color-scheme:light dark;
+  --bg:light-dark(#ffffff,#141010);--ink:light-dark(#1d1414,#f4ecec);--soft:light-dark(#6b5a5a,#c9b8b8);
+  --red:#b3121f;--red2:#8c0d18;--pine:light-dark(#1f5135,#5fae80);--gold:#f2c230;--gold2:#d9a514;
+  --paper:light-dark(#fffdf6,#f5f0e1);--paperInk:#2a2222;--line:light-dark(#eadede,#3a2c2c);--card:light-dark(#fbf5f5,#1e1717)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
+h1,h2{font-family:"DM Serif Display",Georgia,serif;font-weight:400;line-height:1.05;text-wrap:balance;margin:0 0 14px}
+h1{font-size:clamp(34px,6vw,52px)}h2{font-size:clamp(28px,4.4vw,40px)}
+p{margin:0 0 14px}
+.wrap{max-width:760px;margin:0 auto}
+.band{padding:clamp(36px,5vw,64px) max(5vw,18px)}
+.top{background:var(--red);color:#fff;text-align:center;font-size:14px;font-weight:600;padding:10px 16px}
+.hero{background:var(--red);color:#fff;padding-top:28px}
+.hero .wrap{display:grid;gap:28px}
+.hero p.sub{font-size:19px;color:#ffe9ea;max-width:34em}
+.receipt{background:var(--paper);color:var(--paperInk);font-family:"Courier Prime",monospace;font-size:15px;
+  width:min(100%,360px);margin:0 auto;padding:26px 22px 30px;transform:rotate(-1.5deg);
+  box-shadow:0 18px 40px rgba(0,0,0,.35);position:relative;
+  -webkit-mask:radial-gradient(circle 7px at 50% 100%,#0000 98%,#000) 50% 100%/18px 100% repeat-x,linear-gradient(#000,#000) top/100% calc(100% - 7px) no-repeat;
+          mask:radial-gradient(circle 7px at 50% 100%,#0000 98%,#000) 50% 100%/18px 100% repeat-x,linear-gradient(#000,#000) top/100% calc(100% - 7px) no-repeat}
+.receipt h3{font-size:17px;text-align:center;margin:0 0 4px;letter-spacing:.02em}
+.receipt .meta{text-align:center;font-size:13px;margin-bottom:14px}
+.receipt ul{list-style:none;margin:0;padding:12px 0;border-block:1px dashed #9b8f8f}
+.receipt li{display:flex;justify-content:space-between;gap:10px;padding:3px 0}
+.receipt li span:last-child{white-space:nowrap}
+.receipt .total{display:flex;justify-content:space-between;font-weight:700;font-size:19px;padding-top:12px}
+.receipt .total b{color:var(--red);white-space:nowrap}
+.receipt .foot{text-align:center;font-size:13px;margin-top:12px}
+.cta{display:block;width:100%;max-width:460px;margin:22px auto 8px;padding:18px 22px;border:0;border-radius:12px;
+  background:var(--gold);color:#2a1a00;font:800 19px/1.2 Inter,sans-serif;text-align:center;text-decoration:none;
+  box-shadow:0 5px 0 var(--gold2);cursor:pointer;transition:transform .12s}
+.cta:hover{transform:translateY(-2px)}.cta:active{transform:translateY(2px);box-shadow:0 2px 0 var(--gold2)}
+.cta:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.small{font-size:14px;color:var(--soft);text-align:center}
+.hero .small{color:#ffd6d9}
+.pain li,.check li{margin:0 0 10px}
+.check{list-style:none;padding:0;margin:0}
+.check li{padding-left:34px;position:relative}
+.check li::before{content:"✓";position:absolute;left:0;top:3px;width:22px;height:22px;border-radius:50%;background:var(--pine);
+  color:#fff;font-size:13px;font-weight:800;line-height:22px;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:14px;margin-top:18px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.item b{display:block;font-size:18px;margin-bottom:4px}
+.item span{color:var(--soft);font-size:15px}
+.menu{background:var(--card);border-block:1px solid var(--line)}
+.menu ol{margin:0;padding-left:22px}.menu li{margin:0 0 8px}
+.menu small{color:var(--soft)}
+.offer{background:var(--red);color:#fff;text-align:center}
+.box{background:#fff;color:#1d1414;border-radius:18px;padding:28px 22px;max-width:520px;margin:20px auto 0;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+.box ul{list-style:none;padding:0;margin:0 0 18px;text-align:left}
+.box li{padding:8px 0;border-bottom:1px solid #eee;display:flex;justify-content:space-between;gap:12px}
+.box li span:last-child{color:#1f5135;font-weight:600;white-space:nowrap}
+.price{font-family:"DM Serif Display",serif;font-size:clamp(54px,12vw,72px);line-height:1;color:var(--red);margin:6px 0}
+.price small{font-size:.4em}
+.box .small{color:#6b5a5a}
+.guar{display:grid;grid-template-columns:96px 1fr;gap:20px;align-items:center}
+.seal{width:96px;height:96px}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+summary{cursor:pointer;font-weight:600;font-size:17px;min-height:28px}
+summary:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+details p{margin:10px 0 0;color:var(--soft)}
+footer{text-align:center;font-size:13px;color:var(--soft);padding:28px 18px 40px}
+@media(min-width:820px){.hero .wrap{max-width:1040px;grid-template-columns:1.1fr .9fr;align-items:center}}
+@media(max-width:600px){.guar{grid-template-columns:1fr;justify-items:center;text-align:center}}
+@media(prefers-reduced-motion:reduce){.cta{transition:none}.receipt{transform:none}}
+</style>
+</head>
+<body>
+
+<div class="top">Para fazer no dia 24 de dezembro · acesso imediato no seu e-mail</div>
+
+<header class="band hero">
+  <div class="wrap">
+    <div>
+      <h1>Ceia de Natal completa para sua família gastando menos de R$ 100</h1>
+      <p class="sub">Cardápio pronto, lista de compras com quantidade certa e o passo a passo do dia 24. Sua família come bem, e você não precisa estourar o cartão de dezembro.</p>
+      <a class="cta" data-cta href="#oferta">Quero minha ceia por R$ 9,90</a>
+      <p class="small">Pagamento único · Pix ou cartão · Garantia de 7 dias</p>
+    </div>
+    <div class="receipt" role="img" aria-label="Cupom de supermercado com os itens da ceia e total abaixo de 100 reais">
+      <h3>SUPERMERCADO DA CEIA</h3>
+      <div class="meta">24/12 · Mesa para sua família</div>
+      <ul>
+        <li><span>Frango assado inteiro</span><span>1 un</span></li>
+        <li><span>Arroz natalino</span><span>1 kg</span></li>
+        <li><span>Farofa de bacon</span><span>500 g</span></li>
+        <li><span>Salpicão</span><span>1 trav.</span></li>
+        <li><span>Salada verde</span><span>1 trav.</span></li>
+        <li><span>Rabanada</span><span>12 un</span></li>
+        <li><span>Pavê de chocolate</span><span>1 trav.</span></li>
+      </ul>
+      <div class="total"><span>TOTAL</span><b>abaixo de R$ 100</b></div>
+      <div class="foot">* Preços variam por cidade e mercado.</div>
+    </div>
+  </div>
+</header>
+
+<section class="band">
+  <div class="wrap">
+    <h2>Dezembro chega e a conta não fecha</h2>
+    <ul class="pain">
+      <li>Você quer uma mesa bonita para a família, mas o mercado está cada vez mais caro.</li>
+      <li>Vai comprando no impulso, sobra comida e falta dinheiro para o resto do mês.</li>
+      <li>No dia 24 é correria: tudo fica pronto ao mesmo tempo, ou nada fica.</li>
+    </ul>
+    <p>Este guia resolve as três coisas: diz <b>o que fazer</b>, <b>quanto comprar</b> e <b>em que ordem preparar</b>.</p>
+  </div>
+</section>
+
+<section class="band menu">
+  <div class="wrap">
+    <h2>O que você recebe</h2>
+    <div class="grid">
+      <div class="item"><b>Cardápio completo</b><span>Prato principal, 4 acompanhamentos e 2 sobremesas que combinam entre si.</span></div>
+      <div class="item"><b>Lista de compras</b><span>Quantidades exatas para o tamanho da sua família, com o preço estimado de cada item e o total.</span></div>
+      <div class="item"><b>Receitas passo a passo</b><span>Explicadas para quem não cozinha todo dia, sem ingrediente difícil de achar.</span></div>
+      <div class="item"><b>Cronograma do dia 24</b><span>O que adiantar no dia 23 e a ordem do forno para tudo sair quentinho junto.</span></div>
+      <div class="item"><b>Trocas que economizam</b><span>Substituições baratas se algum item estiver caro no seu mercado.</span></div>
+      <div class="item"><b>Para mais pessoas</b><span>Tabela para ajustar as quantidades de 4 até 12 pessoas.</span></div>
+    </div>
+    <a class="cta" data-cta href="#oferta">Quero o cardápio e a lista de compras</a>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>Para quem é</h2>
+    <ul class="check">
+      <li>Para quem vai receber a família e quer uma ceia caprichada sem gastar muito.</li>
+      <li>Para quem nunca organizou uma ceia e não sabe por onde começar.</li>
+      <li>Para quem quer parar de desperdiçar comida e dinheiro no fim do ano.</li>
+      <li>Para quem quer chegar no dia 24 com tudo planejado, sem correria.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="band offer" id="oferta">
+  <div class="wrap">
+    <h2>Sua ceia inteira planejada hoje</h2>
+    <p>Acesso imediato. Você recebe tudo no e-mail assim que o pagamento é aprovado.</p>
+    <div class="box">
+      <ul>
+        <li><span>Cardápio completo de Natal</span><span>incluso</span></li>
+        <li><span>Lista de compras com preços</span><span>incluso</span></li>
+        <li><span>Receitas passo a passo</span><span>incluso</span></li>
+        <li><span>Cronograma do dia 24</span><span>incluso</span></li>
+        <li><span>Trocas que economizam</span><span>incluso</span></li>
+        <li><span>Tabela de 4 a 12 pessoas</span><span>incluso</span></li>
+      </ul>
+      <div class="small">Tudo isso por</div>
+      <div class="price"><small>R$</small> 9,90</div>
+      <div class="small">pagamento único · Pix ou cartão</div>
+      <a class="cta" data-cta href="#">Quero garantir minha ceia</a>
+      <p class="small">Compra segura processada pela Hotmart</p>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap guar">
+    <svg class="seal" viewBox="0 0 96 96" aria-hidden="true">
+      <circle cx="48" cy="48" r="46" fill="#1f5135"/>
+      <circle cx="48" cy="48" r="38" fill="none" stroke="#f2c230" stroke-width="2" stroke-dasharray="3 4"/>
+      <text x="48" y="46" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="26" fill="#fff">7</text>
+      <text x="48" y="64" text-anchor="middle" font-family="Inter,sans-serif" font-weight="600" font-size="11" fill="#fff">DIAS</text>
+    </svg>
+    <div>
+      <h2>Garantia de 7 dias</h2>
+      <p>Se o guia não for o que você esperava, peça o reembolso em até 7 dias pela própria Hotmart e receba 100% do valor de volta. Sem perguntas.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band menu">
+  <div class="wrap">
+    <h2>Perguntas frequentes</h2>
+    <details><summary>Como recebo o material?</summary><p>Assim que o pagamento é aprovado, chega um e-mail da Hotmart com o acesso. No Pix, costuma ser na hora.</p></details>
+    <details><summary>Dá mesmo para fazer com menos de R$ 100?</summary><p>A lista foi montada com ingredientes simples e quantidades certas para a sua família. Os preços mudam de uma cidade para outra, por isso o guia traz trocas mais baratas para cada item.</p></details>
+    <details><summary>Serve para família grande ou pequena?</summary><p>Sim. A tabela de quantidades ajusta tudo de 4 até 12 pessoas.</p></details>
+    <details><summary>Preciso saber cozinhar?</summary><p>Não. As receitas são explicadas passo a passo, e o cronograma diz o que fazer em cada hora.</p></details>
+    <details><summary>Consigo ver no celular?</summary><p>Sim. O material é em PDF e abre no celular, no computador ou impresso.</p></details>
+    <a class="cta" data-cta href="#oferta">Quero minha ceia por R$ 9,90</a>
+  </div>
+</section>
+
+<footer>
+  <p>Este produto não garante resultados além do descrito. Preços dos ingredientes são estimativas e variam por região.</p>
+  <p>Suporte: <a href="mailto:suporteprodutosoficial@gmail.com" style="color:inherit">suporteprodutosoficial@gmail.com</a></p>
+  <p>© 2026 · Todos os direitos reservados</p>
+</footer>
+
+<script>
+{
+  /* ============ LINK DO CHECKOUT ============
+     Cole aqui o link do checkout da Hotmart. Os botões repassam as UTMs da URL. */
+  const CHECKOUT_URL = 'https://pay.hotmart.com/N108671891C';
+
+  const ready = CHECKOUT_URL.startsWith('http');
+  const build = () => {
+    if (!ready) return '#oferta';
+    const url = new URL(CHECKOUT_URL);
+    new URLSearchParams(location.search).forEach((v, k) => { if (!url.searchParams.has(k)) url.searchParams.set(k, v); });
+    return url.toString();
+  };
+  document.querySelectorAll('[data-cta]').forEach(a => {
+    a.href = build();
+    a.addEventListener('click', () => { try { window.fbq && fbq('track', 'InitiateCheckout'); } catch (e) {} });
+  });
+}
+</script>
+</body>
+</html>
