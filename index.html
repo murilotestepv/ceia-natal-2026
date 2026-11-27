@@ -96,6 +96,31 @@ summary{cursor:pointer;font-weight:600;font-size:17px;min-height:28px}
 summary:focus-visible{outline:2px solid var(--red);outline-offset:3px}
 details p{margin:10px 0 0;color:var(--soft)}
 footer{text-align:center;font-size:13px;color:var(--soft);padding:28px 18px 40px}
+.photo{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:16px;box-shadow:0 14px 34px rgba(0,0,0,.22)}
+.hero-photo{border:6px solid #fff;transform:rotate(1.2deg);margin-bottom:-40px;position:relative;z-index:0}
+.hero .stack{display:grid;gap:0;justify-items:center}
+.hero .stack .receipt{z-index:1}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px;margin-top:20px}
+.gallery figure{margin:0}.gallery figcaption{font-size:14px;color:var(--soft);margin-top:6px;text-align:center}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:18px;max-width:900px;margin:22px auto 0;align-items:stretch}
+.plan{background:#fff;color:#1d1414;border-radius:18px;padding:26px 22px;box-shadow:0 18px 40px rgba(0,0,0,.25);display:flex;flex-direction:column;text-align:left;position:relative}
+.plan h3{font:400 28px/1.1 "DM Serif Display",Georgia,serif;margin:0 0 6px}
+.plan .desc{color:#6b5a5a;font-size:15px;margin-bottom:12px}
+.plan ul{list-style:none;padding:0;margin:0 0 16px;flex:1}
+.plan li{padding:7px 0 7px 28px;border-bottom:1px solid #eee;position:relative;font-size:15px}
+.plan li::before{content:"✓";position:absolute;left:0;top:7px;color:#1f5135;font-weight:800}
+.plan li.extra{font-weight:600}
+.plan .price{text-align:center}
+.plan .note{text-align:center;font-size:13px;color:#6b5a5a}
+.plan.best{outline:4px solid var(--gold)}
+.ribbon{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--gold);color:#2a1a00;font:800 13px Inter;padding:6px 14px;border-radius:999px;white-space:nowrap}
+.plan .cta{margin-top:14px}
+.plan .cta.alt{background:#1f5135;color:#fff;box-shadow:0 5px 0 #12341f}
+.extras{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px;margin-top:18px}
+.extras .item img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:10px;margin-bottom:12px}
+.testi{display:grid;gap:14px;margin-top:18px}
+.testi blockquote{margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.testi cite{display:block;font-style:normal;font-weight:600;margin-top:8px;color:var(--soft);font-size:14px}
 @media(min-width:820px){.hero .wrap{max-width:1040px;grid-template-columns:1.1fr .9fr;align-items:center}}
 @media(max-width:600px){.guar{grid-template-columns:1fr;justify-items:center;text-align:center}}
 @media(prefers-reduced-motion:reduce){.cta{transition:none}.receipt{transform:none}}
@@ -110,9 +135,11 @@ footer{text-align:center;font-size:13px;color:var(--soft);padding:28px 18px 40px
     <div>
       <h1>Ceia de Natal completa para sua família gastando menos de R$ 100</h1>
       <p class="sub">Cardápio pronto, lista de compras com quantidade certa e o passo a passo do dia 24. Sua família come bem, e você não precisa estourar o cartão de dezembro.</p>
-      <a class="cta" data-cta href="#oferta">Quero minha ceia por R$ 9,90</a>
-      <p class="small">Pagamento único · Pix ou cartão · Garantia de 7 dias</p>
+      <a class="cta" data-cta="" href="#oferta">Quero minha ceia · a partir de R$ 9,90</a>
+      <p class="small">Planos a partir de R$ 9,90 · Pagamento único · Pix ou cartão · Garantia de 7 dias</p>
     </div>
+    <div class="stack">
+      <img class="photo hero-photo" src="https://images.unsplash.com/photo-1578496780896-7081cc23c111?w=1100&q=70&auto=format&fit=crop" alt="Família reunida à mesa da ceia de Natal" width="1100" height="733" fetchpriority="high">
     <div class="receipt" role="img" aria-label="Cupom de supermercado com os itens da ceia e total abaixo de 100 reais">
       <h3>SUPERMERCADO DA CEIA</h3>
       <div class="meta">24/12 · Mesa para sua família</div>
@@ -128,6 +155,7 @@ footer{text-align:center;font-size:13px;color:var(--soft);padding:28px 18px 40px
       <div class="total"><span>TOTAL</span><b>abaixo de R$ 100</b></div>
       <div class="foot">* Preços variam por cidade e mercado.</div>
     </div>
+    </div>
   </div>
 </header>
 
@@ -140,6 +168,10 @@ footer{text-align:center;font-size:13px;color:var(--soft);padding:28px 18px 40px
       <li>No dia 24 é correria: tudo fica pronto ao mesmo tempo, ou nada fica.</li>
     </ul>
     <p>Este guia resolve as três coisas: diz <b>o que fazer</b>, <b>quanto comprar</b> e <b>em que ordem preparar</b>.</p>
+    <div class="gallery">
+      <figure><img class="photo" src="https://images.unsplash.com/photo-1605926637512-c8b131444a4b?w=1100&q=70&auto=format&fit=crop" alt="Mesa de Natal farta com pernil, tortas e acompanhamentos" loading="lazy" width="1100" height="733"><figcaption>Mesa cheia, sem estourar o orçamento</figcaption></figure>
+      <figure><img class="photo" src="https://images.unsplash.com/photo-1601118964938-228a89955311?w=1100&q=70&auto=format&fit=crop" alt="Família brindando sobre a mesa da ceia" loading="lazy" width="1100" height="733"><figcaption>A família reunida em volta da mesa</figcaption></figure>
+    </div>
   </div>
 </section>
 
@@ -154,7 +186,7 @@ footer{text-align:center;font-size:13px;color:var(--soft);padding:28px 18px 40px
       <div class="item"><b>Trocas que economizam</b><span>Substituições baratas se algum item estiver caro no seu mercado.</span></div>
       <div class="item"><b>Para mais pessoas</b><span>Tabela para ajustar as quantidades de 4 até 12 pessoas.</span></div>
     </div>
-    <a class="cta" data-cta href="#oferta">Quero o cardápio e a lista de compras</a>
+    <a class="cta" data-cta="" href="#oferta">Quero o cardápio e a lista de compras</a>
   </div>
 </section>
 
@@ -170,27 +202,61 @@ footer{text-align:center;font-size:13px;color:var(--soft);padding:28px 18px 40px
   </div>
 </section>
 
-<section class="band offer" id="oferta">
+
+<section class="band">
   <div class="wrap">
-    <h2>Sua ceia inteira planejada hoje</h2>
-    <p>Acesso imediato. Você recebe tudo no e-mail assim que o pagamento é aprovado.</p>
-    <div class="box">
-      <ul>
-        <li><span>Cardápio completo de Natal</span><span>incluso</span></li>
-        <li><span>Lista de compras com preços</span><span>incluso</span></li>
-        <li><span>Receitas passo a passo</span><span>incluso</span></li>
-        <li><span>Cronograma do dia 24</span><span>incluso</span></li>
-        <li><span>Trocas que economizam</span><span>incluso</span></li>
-        <li><span>Tabela de 4 a 12 pessoas</span><span>incluso</span></li>
-      </ul>
-      <div class="small">Tudo isso por</div>
-      <div class="price"><small>R$</small> 9,90</div>
-      <div class="small">pagamento único · Pix ou cartão</div>
-      <a class="cta" data-cta href="#">Quero garantir minha ceia</a>
-      <p class="small">Compra segura processada pela Hotmart</p>
+    <h2>Quer a mesa completa? Leve o Kit Natal</h2>
+    <p>No Kit Natal Completo, além da ceia, você recebe mais dois guias para deixar o Natal pronto de ponta a ponta.</p>
+    <div class="extras">
+      <div class="item"><img src="https://images.unsplash.com/photo-1608306680538-0b948be63c9b?w=900&q=70&auto=format&fit=crop" alt="Mesa posta de Natal decorada com velas vermelhas" loading="lazy"><b>Mesa Posta de Natal Gastando Pouco</b><span>Passo a passo para montar uma mesa posta bonita com o que você já tem em casa: toalha, pratos, guardanapos e centro de mesa.</span></div>
+      <div class="item"><img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=900&q=70&auto=format&fit=crop" alt="Presentes de Natal embrulhados" loading="lazy"><b>Presentes de Natal e Amigo Secreto até R$ 50</b><span>Ideias de presentes separadas por tipo de pessoa, com sugestões de onde comprar e mensagens prontas para o cartão.</span></div>
     </div>
   </div>
 </section>
+<section class="band offer" id="oferta">
+  <div class="wrap">
+    <h2>Escolha o seu plano</h2>
+    <p>Acesso imediato. Você recebe tudo no e-mail assim que o pagamento é aprovado.</p>
+    <div class="plans">
+      <div class="plan">
+        <h3>Ceia de Natal</h3>
+        <div class="desc">Para resolver a ceia da família</div>
+        <ul>
+          <li>Cardápio completo de Natal</li>
+          <li>Lista de compras com preços</li>
+          <li>Receitas passo a passo</li>
+          <li>Cronograma do dia 24</li>
+          <li>Trocas que economizam</li>
+          <li>Tabela de 4 a 12 pessoas</li>
+        </ul>
+        <div class="price"><small>R$</small> 9,90</div>
+        <div class="note">pagamento único · Pix ou cartão</div>
+        <a class="cta alt" data-cta="ceia" href="#">Quero só a ceia</a>
+      </div>
+      <div class="plan best">
+        <span class="ribbon">MAIS COMPLETO</span>
+        <h3>Kit Natal Completo</h3>
+        <div class="desc">Ceia + mesa posta + presentes</div>
+        <ul>
+          <li>Tudo do plano Ceia de Natal</li>
+          <li class="extra">Mesa Posta de Natal Gastando Pouco</li>
+          <li class="extra">Presentes de Natal e Amigo Secreto até R$ 50</li>
+        </ul>
+        <div class="price"><small>R$</small> 19,90</div>
+        <div class="note">pagamento único · os 3 guias comprados separados somam R$ 29,70</div>
+        <a class="cta" data-cta="kit" href="#">Quero o Kit Natal Completo</a>
+      </div>
+    </div>
+    <p class="small" style="color:#ffd6d9;margin-top:16px">Compra segura processada pela Hotmart · Garantia de 7 dias</p>
+  </div>
+</section>
+<section class="band" id="depoimentos" hidden>
+  <div class="wrap">
+    <h2>Quem já fez a ceia com o guia</h2>
+    <div class="testi" id="testi-list"></div>
+  </div>
+</section>
+
 
 <section class="band">
   <div class="wrap guar">
@@ -215,33 +281,53 @@ footer{text-align:center;font-size:13px;color:var(--soft);padding:28px 18px 40px
     <details><summary>Serve para família grande ou pequena?</summary><p>Sim. A tabela de quantidades ajusta tudo de 4 até 12 pessoas.</p></details>
     <details><summary>Preciso saber cozinhar?</summary><p>Não. As receitas são explicadas passo a passo, e o cronograma diz o que fazer em cada hora.</p></details>
     <details><summary>Consigo ver no celular?</summary><p>Sim. O material é em PDF e abre no celular, no computador ou impresso.</p></details>
-    <a class="cta" data-cta href="#oferta">Quero minha ceia por R$ 9,90</a>
+    <a class="cta" data-cta="" href="#oferta">Quero minha ceia · a partir de R$ 9,90</a>
   </div>
 </section>
 
 <footer>
   <p>Este produto não garante resultados além do descrito. Preços dos ingredientes são estimativas e variam por região.</p>
   <p>Suporte: <a href="mailto:suporteprodutosoficial@gmail.com" style="color:inherit">suporteprodutosoficial@gmail.com</a></p>
+  <p>Fotos ilustrativas: Unsplash.</p>
   <p>© 2026 · Todos os direitos reservados</p>
 </footer>
 
 <script>
 {
-  /* ============ LINK DO CHECKOUT ============
-     Cole aqui o link do checkout da Hotmart. Os botões repassam as UTMs da URL. */
-  const CHECKOUT_URL = 'https://pay.hotmart.com/N108671891C';
-
-  const ready = CHECKOUT_URL.startsWith('http');
-  const build = () => {
-    if (!ready) return '#oferta';
-    const url = new URL(CHECKOUT_URL);
+  /* ============ LINKS DO CHECKOUT ============ */
+  const CHECKOUT = {
+    ceia: 'https://pay.hotmart.com/N108671891C',
+    kit:  'https://pay.hotmart.com/C108698808C'
+  };
+  const build = (plan) => {
+    const url = new URL(CHECKOUT[plan] || CHECKOUT.ceia);
     new URLSearchParams(location.search).forEach((v, k) => { if (!url.searchParams.has(k)) url.searchParams.set(k, v); });
     return url.toString();
   };
   document.querySelectorAll('[data-cta]').forEach(a => {
-    a.href = build();
-    a.addEventListener('click', () => { try { window.fbq && fbq('track', 'InitiateCheckout'); } catch (e) {} });
+    const plan = a.dataset.cta;
+    if (!plan) { a.href = '#oferta'; return; }
+    a.href = build(plan);
+    a.addEventListener('click', () => {
+      try { window.fbq && fbq('track', 'InitiateCheckout', { value: plan === 'kit' ? 19.90 : 9.90, currency: 'BRL', content_name: plan }); } catch (e) {}
+    });
   });
+
+  /* ============ DEPOIMENTOS ============
+     Cole aqui SOMENTE depoimentos reais de compradores (com autorização).
+     A seção só aparece na página quando houver pelo menos um.
+     Exemplo: { texto: 'O que a pessoa escreveu', nome: 'Ana, Goiânia' } */
+  const DEPOIMENTOS = [];
+  if (DEPOIMENTOS.length) {
+    const list = document.getElementById('testi-list');
+    DEPOIMENTOS.forEach(d => {
+      const q = document.createElement('blockquote');
+      q.textContent = d.texto;
+      const c = document.createElement('cite'); c.textContent = '— ' + d.nome; q.appendChild(c);
+      list.appendChild(q);
+    });
+    document.getElementById('depoimentos').hidden = false;
+  }
 }
 </script>
 </body>
