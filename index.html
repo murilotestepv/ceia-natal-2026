@@ -296,8 +296,8 @@ footer{text-align:center;font-size:13px;color:var(--soft);padding:28px 18px 40px
 {
   /* ============ LINKS DO CHECKOUT ============ */
   const CHECKOUT = {
-    ceia: 'https://pay.hotmart.com/N108671891C',
-    kit:  'https://pay.hotmart.com/C108698808C'
+    ceia: 'https://pay.hotmart.com/N108671891C?checkoutMode=10',
+    kit:  'https://pay.hotmart.com/C108698808C?checkoutMode=10'
   };
   const build = (plan) => {
     const url = new URL(CHECKOUT[plan] || CHECKOUT.ceia);
